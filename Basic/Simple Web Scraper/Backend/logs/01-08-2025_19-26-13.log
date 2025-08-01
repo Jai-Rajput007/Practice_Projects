@@ -1,0 +1,34 @@
+[2025-08-01 19:26:42,219] 33 root - INFO - Scrape request for url :https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:26:42,219] 37 root - INFO - Scraping Started
+[2025-08-01 19:26:42,219] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:26:42,252] 23 root - INFO - Database connection successful
+[2025-08-01 19:26:42,252] 29 root - INFO - Verifying existing data
+[2025-08-01 19:26:42,253] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:26:42,253] 12 root - INFO - Fetcher initialized for https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:26:42,253] 16 root - INFO - Sending GET request to https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:26:44,325] 19 root - INFO - Sucessful response from https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463 with status code 200
+[2025-08-01 19:26:44,325] 43 root - INFO - Successfully fetched
+[2025-08-01 19:26:44,325] 9 root - INFO - Parser initialized 
+[2025-08-01 19:26:44,355] 32 root - INFO - Successfully parsed and extracted 11 items
+[2025-08-01 19:26:44,356] 48 root - INFO - Parsed successfully
+[2025-08-01 19:26:44,356] 50 root - INFO - Inserting
+[2025-08-01 19:26:44,362] 62 root - INFO - Successfully inserted 11
+[2025-08-01 19:26:44,362] 53 root - INFO - Stored 11 items
+[2025-08-01 19:26:44,362] 72 root - INFO - Connection closed
+[2025-08-01 19:26:46,126] 33 root - INFO - Scrape request for url :https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:26:46,126] 37 root - INFO - Scraping Started
+[2025-08-01 19:26:46,126] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:26:46,160] 23 root - INFO - Database connection successful
+[2025-08-01 19:26:46,160] 29 root - INFO - Verifying existing data
+[2025-08-01 19:26:46,162] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:26:46,162] 12 root - INFO - Fetcher initialized for https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:26:46,162] 16 root - INFO - Sending GET request to https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:26:47,762] 19 root - INFO - Sucessful response from https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463 with status code 200
+[2025-08-01 19:26:47,762] 43 root - INFO - Successfully fetched
+[2025-08-01 19:26:47,762] 9 root - INFO - Parser initialized 
+[2025-08-01 19:26:47,803] 32 root - INFO - Successfully parsed and extracted 11 items
+[2025-08-01 19:26:47,803] 48 root - INFO - Parsed successfully
+[2025-08-01 19:26:47,803] 50 root - INFO - Inserting
+[2025-08-01 19:26:47,805] 62 root - INFO - Successfully inserted 11
+[2025-08-01 19:26:47,805] 53 root - INFO - Stored 11 items
+[2025-08-01 19:26:47,809] 72 root - INFO - Connection closed

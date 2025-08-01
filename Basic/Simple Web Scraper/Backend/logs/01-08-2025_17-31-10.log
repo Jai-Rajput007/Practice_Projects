@@ -1,0 +1,4 @@
+[2025-08-01 17:37:18,369] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:37:18,370] 27 root - INFO - Scraping Started
+[2025-08-01 17:37:18,370] 13 root - INFO - Attempting to connect database
+[2025-08-01 17:37:18,416] 48 root - ERROR - Error occured

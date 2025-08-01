@@ -1,0 +1,51 @@
+[2025-08-01 17:49:56,899] 33 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:49:56,899] 37 root - INFO - Scraping Started
+[2025-08-01 17:49:56,900] 15 root - INFO - Attempting to connect database
+[2025-08-01 17:49:56,934] 23 root - INFO - Database connection successful
+[2025-08-01 17:49:56,934] 29 root - INFO - Verifying existing data
+[2025-08-01 17:49:56,934] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 17:49:56,934] 12 root - INFO - Fetcher initialized for https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:49:56,935] 16 root - INFO - Sending GET request to https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:49:58,850] 19 root - INFO - Sucessful response from https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f with status code 200
+[2025-08-01 17:49:58,850] 43 root - INFO - Successfully fetched
+[2025-08-01 17:49:58,850] 9 root - INFO - Parser initialized 
+[2025-08-01 17:49:58,878] 32 root - INFO - Successfully parsed and extracted 19 items
+[2025-08-01 17:49:58,878] 48 root - INFO - Parsed successfully
+[2025-08-01 17:49:58,878] 50 root - INFO - Inserting
+[2025-08-01 17:49:58,882] 62 root - INFO - Successfully inserted 19
+[2025-08-01 17:49:58,882] 53 root - INFO - Stored 19 items
+[2025-08-01 17:49:58,882] 72 root - INFO - Connection closed
+[2025-08-01 18:50:26,010] 33 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 18:50:26,025] 37 root - INFO - Scraping Started
+[2025-08-01 18:50:26,026] 15 root - INFO - Attempting to connect database
+[2025-08-01 18:50:26,098] 23 root - INFO - Database connection successful
+[2025-08-01 18:50:26,099] 29 root - INFO - Verifying existing data
+[2025-08-01 18:50:26,119] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 18:50:26,119] 12 root - INFO - Fetcher initialized for https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 18:50:26,120] 16 root - INFO - Sending GET request to https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 18:50:28,052] 19 root - INFO - Sucessful response from https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f with status code 200
+[2025-08-01 18:50:28,055] 43 root - INFO - Successfully fetched
+[2025-08-01 18:50:28,055] 9 root - INFO - Parser initialized 
+[2025-08-01 18:50:28,089] 32 root - INFO - Successfully parsed and extracted 19 items
+[2025-08-01 18:50:28,089] 48 root - INFO - Parsed successfully
+[2025-08-01 18:50:28,089] 50 root - INFO - Inserting
+[2025-08-01 18:50:28,125] 62 root - INFO - Successfully inserted 19
+[2025-08-01 18:50:28,125] 53 root - INFO - Stored 19 items
+[2025-08-01 18:50:28,125] 72 root - INFO - Connection closed
+[2025-08-01 18:52:06,052] 33 root - INFO - Scrape request for url :https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 18:52:06,052] 37 root - INFO - Scraping Started
+[2025-08-01 18:52:06,052] 15 root - INFO - Attempting to connect database
+[2025-08-01 18:52:06,207] 23 root - INFO - Database connection successful
+[2025-08-01 18:52:06,208] 29 root - INFO - Verifying existing data
+[2025-08-01 18:52:06,208] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 18:52:06,208] 12 root - INFO - Fetcher initialized for https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 18:52:06,208] 16 root - INFO - Sending GET request to https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 18:52:08,693] 19 root - INFO - Sucessful response from https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463 with status code 200
+[2025-08-01 18:52:08,694] 43 root - INFO - Successfully fetched
+[2025-08-01 18:52:08,694] 9 root - INFO - Parser initialized 
+[2025-08-01 18:52:08,731] 32 root - INFO - Successfully parsed and extracted 11 items
+[2025-08-01 18:52:08,731] 48 root - INFO - Parsed successfully
+[2025-08-01 18:52:08,731] 50 root - INFO - Inserting
+[2025-08-01 18:52:08,745] 62 root - INFO - Successfully inserted 11
+[2025-08-01 18:52:08,745] 53 root - INFO - Stored 11 items
+[2025-08-01 18:52:08,745] 72 root - INFO - Connection closed

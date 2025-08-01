@@ -1,14 +1,25 @@
+from fastapi import FastAPI, HTTPException
 from components.fetcher import Fetcher
+from components.parser import Parser
+from components.store  import Storer
 from log_handler.logger import logging
 from exception_handler.exception import WebscraperException
 import sys
-from components.parser import Parser
-from components.store  import Storer
-import argparse
-from urllib.parse import urlparse
-from dotenv import load_dotenv
+from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 
-load_dotenv()
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+
+)
+class  ScrapeRequest(BaseModel):
+    url:str
 
 def validate_url(url:str) -> str:
     if not url.startswith(('http://','https://')):
@@ -16,23 +27,12 @@ def validate_url(url:str) -> str:
         raise WebscraperException("Invalid url",sys)
     return url
 
-def parse_arguments() -> str:
-    parser  = argparse.ArgumentParser(
-        description="WEB scraper"
-    )
-    parser.add_argument(
-        '--url',
-        type = str,
-        required=True,
-        help="Target URL to scrape (e.g., http://books.toscrape.com/)"
-
-    )
-    args = parser.parse_args()
-    return validate_url(args.url)
-
-def main(url:str)-> None:
-    storer = None
+@app.post("/scrape")
+async def scrape_url(request:ScrapeRequest):
     try:
+        logging.info(f"Scrape request for url :{request.url}")
+        url = validate_url(request.url)
+
         #Setup
         logging.info('Scraping Started')
         storer = Storer()
@@ -50,22 +50,20 @@ def main(url:str)-> None:
         #Store
         if parsed_data:
             storer.store_data(data=parsed_data)
+            logging.info(f"Stored {len(parsed_data)} items")
         else :
             logging.warning("Parser returned no data to store")
-        logging.info("Scraped Successfully")
+        return {"message":"Scraping successful","items_scraped":len(parsed_data)}
     except WebscraperException as e:
         logging.error("Error occured")
-        sys.exit(1)
+        raise HTTPException(status_code=400,detail=str(e))
+    except Exception as e:
+        logging.error(f"Unexpected Error")
+        raise HTTPException(status_code=500,detail="Internal Server error")
     finally:
         if storer:
             storer.close_connection()
 
-if __name__ == "__main__":
-    try:
-        target_url = parse_arguments()
-        main(target_url)
-    except WebscraperException as e:
-        logging.error("Failed to scrape")
-        sys.exit(1)
+
     
 

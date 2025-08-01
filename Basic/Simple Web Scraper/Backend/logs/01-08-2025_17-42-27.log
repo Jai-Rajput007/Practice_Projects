@@ -1,0 +1,68 @@
+[2025-08-01 17:43:01,423] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:01,423] 27 root - INFO - Scraping Started
+[2025-08-01 17:43:01,423] 15 root - INFO - Attempting to connect database
+[2025-08-01 17:43:01,469] 23 root - INFO - Database connection successful
+[2025-08-01 17:43:01,469] 29 root - INFO - Verifying existing data
+[2025-08-01 17:43:01,475] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 17:43:01,475] 12 root - INFO - Fetcher initialized for https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:01,475] 16 root - INFO - Sending GET request to https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:03,352] 19 root - INFO - Sucessful response from https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f with status code 200
+[2025-08-01 17:43:03,354] 33 root - INFO - Successfully fetched
+[2025-08-01 17:43:03,354] 9 root - INFO - Parser initialized 
+[2025-08-01 17:43:03,359] 32 root - INFO - Successfully parsed and extracted 19 items
+[2025-08-01 17:43:03,359] 38 root - INFO - Parsed successfully
+[2025-08-01 17:43:03,359] 50 root - INFO - Inserting
+[2025-08-01 17:43:03,406] 62 root - INFO - Successfully inserted 19
+[2025-08-01 17:43:03,406] 43 root - INFO - Stored 19 items
+[2025-08-01 17:43:03,406] 72 root - INFO - Connection closed
+[2025-08-01 17:43:11,099] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:11,099] 27 root - INFO - Scraping Started
+[2025-08-01 17:43:11,099] 15 root - INFO - Attempting to connect database
+[2025-08-01 17:43:11,134] 23 root - INFO - Database connection successful
+[2025-08-01 17:43:11,134] 29 root - INFO - Verifying existing data
+[2025-08-01 17:43:11,135] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 17:43:11,135] 12 root - INFO - Fetcher initialized for https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:11,135] 16 root - INFO - Sending GET request to https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:12,551] 19 root - INFO - Sucessful response from https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f with status code 200
+[2025-08-01 17:43:12,551] 33 root - INFO - Successfully fetched
+[2025-08-01 17:43:12,551] 9 root - INFO - Parser initialized 
+[2025-08-01 17:43:12,572] 32 root - INFO - Successfully parsed and extracted 19 items
+[2025-08-01 17:43:12,572] 38 root - INFO - Parsed successfully
+[2025-08-01 17:43:12,572] 50 root - INFO - Inserting
+[2025-08-01 17:43:12,574] 62 root - INFO - Successfully inserted 19
+[2025-08-01 17:43:12,574] 43 root - INFO - Stored 19 items
+[2025-08-01 17:43:12,574] 72 root - INFO - Connection closed
+[2025-08-01 17:43:42,583] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:42,583] 27 root - INFO - Scraping Started
+[2025-08-01 17:43:42,583] 15 root - INFO - Attempting to connect database
+[2025-08-01 17:43:42,615] 23 root - INFO - Database connection successful
+[2025-08-01 17:43:42,615] 29 root - INFO - Verifying existing data
+[2025-08-01 17:43:42,617] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 17:43:42,617] 12 root - INFO - Fetcher initialized for https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:42,618] 16 root - INFO - Sending GET request to https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:43:44,838] 19 root - INFO - Sucessful response from https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f with status code 200
+[2025-08-01 17:43:44,838] 33 root - INFO - Successfully fetched
+[2025-08-01 17:43:44,838] 9 root - INFO - Parser initialized 
+[2025-08-01 17:43:44,870] 32 root - INFO - Successfully parsed and extracted 19 items
+[2025-08-01 17:43:44,870] 38 root - INFO - Parsed successfully
+[2025-08-01 17:43:44,870] 50 root - INFO - Inserting
+[2025-08-01 17:43:44,874] 62 root - INFO - Successfully inserted 19
+[2025-08-01 17:43:44,874] 43 root - INFO - Stored 19 items
+[2025-08-01 17:43:44,874] 72 root - INFO - Connection closed
+[2025-08-01 17:49:05,571] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:49:05,572] 27 root - INFO - Scraping Started
+[2025-08-01 17:49:05,572] 15 root - INFO - Attempting to connect database
+[2025-08-01 17:49:05,609] 23 root - INFO - Database connection successful
+[2025-08-01 17:49:05,609] 29 root - INFO - Verifying existing data
+[2025-08-01 17:49:05,614] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 17:49:05,614] 12 root - INFO - Fetcher initialized for https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:49:05,614] 16 root - INFO - Sending GET request to https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:49:08,414] 19 root - INFO - Sucessful response from https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f with status code 200
+[2025-08-01 17:49:08,414] 33 root - INFO - Successfully fetched
+[2025-08-01 17:49:08,414] 9 root - INFO - Parser initialized 
+[2025-08-01 17:49:08,436] 32 root - INFO - Successfully parsed and extracted 19 items
+[2025-08-01 17:49:08,436] 38 root - INFO - Parsed successfully
+[2025-08-01 17:49:08,436] 50 root - INFO - Inserting
+[2025-08-01 17:49:08,450] 62 root - INFO - Successfully inserted 19
+[2025-08-01 17:49:08,450] 43 root - INFO - Stored 19 items
+[2025-08-01 17:49:08,450] 72 root - INFO - Connection closed

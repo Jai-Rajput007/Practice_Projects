@@ -1,0 +1,51 @@
+[2025-08-01 19:21:14,309] 33 root - INFO - Scrape request for url :https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:21:14,309] 37 root - INFO - Scraping Started
+[2025-08-01 19:21:14,309] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:21:14,452] 23 root - INFO - Database connection successful
+[2025-08-01 19:21:14,453] 29 root - INFO - Verifying existing data
+[2025-08-01 19:21:14,453] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:21:14,453] 12 root - INFO - Fetcher initialized for https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:21:14,453] 16 root - INFO - Sending GET request to https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:21:16,259] 19 root - INFO - Sucessful response from https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463 with status code 200
+[2025-08-01 19:21:16,265] 43 root - INFO - Successfully fetched
+[2025-08-01 19:21:16,265] 9 root - INFO - Parser initialized 
+[2025-08-01 19:21:16,291] 32 root - INFO - Successfully parsed and extracted 11 items
+[2025-08-01 19:21:16,291] 48 root - INFO - Parsed successfully
+[2025-08-01 19:21:16,291] 50 root - INFO - Inserting
+[2025-08-01 19:21:16,302] 62 root - INFO - Successfully inserted 11
+[2025-08-01 19:21:16,305] 53 root - INFO - Stored 11 items
+[2025-08-01 19:21:16,305] 72 root - INFO - Connection closed
+[2025-08-01 19:24:16,986] 33 root - INFO - Scrape request for url :https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:24:16,986] 37 root - INFO - Scraping Started
+[2025-08-01 19:24:16,986] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:24:17,032] 23 root - INFO - Database connection successful
+[2025-08-01 19:24:17,032] 29 root - INFO - Verifying existing data
+[2025-08-01 19:24:17,033] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:24:17,033] 12 root - INFO - Fetcher initialized for https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:24:17,033] 16 root - INFO - Sending GET request to https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:24:19,126] 19 root - INFO - Sucessful response from https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463 with status code 200
+[2025-08-01 19:24:19,126] 43 root - INFO - Successfully fetched
+[2025-08-01 19:24:19,126] 9 root - INFO - Parser initialized 
+[2025-08-01 19:24:19,177] 32 root - INFO - Successfully parsed and extracted 11 items
+[2025-08-01 19:24:19,177] 48 root - INFO - Parsed successfully
+[2025-08-01 19:24:19,177] 50 root - INFO - Inserting
+[2025-08-01 19:24:19,183] 62 root - INFO - Successfully inserted 11
+[2025-08-01 19:24:19,183] 53 root - INFO - Stored 11 items
+[2025-08-01 19:24:19,183] 72 root - INFO - Connection closed
+[2025-08-01 19:24:35,047] 33 root - INFO - Scrape request for url :https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:24:35,047] 37 root - INFO - Scraping Started
+[2025-08-01 19:24:35,047] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:24:35,084] 23 root - INFO - Database connection successful
+[2025-08-01 19:24:35,086] 29 root - INFO - Verifying existing data
+[2025-08-01 19:24:35,086] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:24:35,086] 12 root - INFO - Fetcher initialized for https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:24:35,086] 16 root - INFO - Sending GET request to https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:24:36,646] 19 root - INFO - Sucessful response from https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463 with status code 200
+[2025-08-01 19:24:36,646] 43 root - INFO - Successfully fetched
+[2025-08-01 19:24:36,646] 9 root - INFO - Parser initialized 
+[2025-08-01 19:24:36,675] 32 root - INFO - Successfully parsed and extracted 11 items
+[2025-08-01 19:24:36,675] 48 root - INFO - Parsed successfully
+[2025-08-01 19:24:36,675] 50 root - INFO - Inserting
+[2025-08-01 19:24:36,686] 62 root - INFO - Successfully inserted 11
+[2025-08-01 19:24:36,686] 53 root - INFO - Stored 11 items
+[2025-08-01 19:24:36,686] 72 root - INFO - Connection closed

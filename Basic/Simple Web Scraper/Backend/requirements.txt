@@ -2,3 +2,6 @@ requests
 beautifulsoup4
 typing
 psycopg2
+fastapi
+uvicorn
+dotenv

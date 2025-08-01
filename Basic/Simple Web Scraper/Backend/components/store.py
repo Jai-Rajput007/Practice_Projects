@@ -5,6 +5,8 @@ import os
 from typing import List, Dict
 from exception_handler.exception import WebscraperException
 from log_handler.logger import logging
+from dotenv import load_dotenv
+load_dotenv()
 
 class Storer:
     def __init__(self):

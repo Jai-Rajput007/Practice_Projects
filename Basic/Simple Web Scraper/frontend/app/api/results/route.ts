@@ -1,0 +1,23 @@
+// src/app/api/results/route.ts
+import { NextResponse } from 'next/server';
+import { Pool } from 'pg';
+
+const pool = new Pool({
+  database: process.env.DB_NAME || 'scraped_data',
+  user: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASSWORD || 'Scraper123',
+  host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT || '5432'),
+});
+
+export async function GET() {
+  try {
+    const client = await pool.connect();
+    const result = await client.query('SELECT id, title, content, scraped_at AS created_at FROM scraped_data ORDER BY id DESC');
+    client.release();
+    return NextResponse.json(result.rows, { status: 200 });
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+    return NextResponse.json({ error: `Database Error: ${errorMessage}` }, { status: 500 });
+  }
+}

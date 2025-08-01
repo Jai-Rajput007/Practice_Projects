@@ -1,0 +1,12 @@
+[2025-08-01 17:40:37,839] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:40:37,839] 27 root - INFO - Scraping Started
+[2025-08-01 17:40:37,839] 13 root - INFO - Attempting to connect database
+[2025-08-01 17:40:37,893] 48 root - ERROR - Error occured
+[2025-08-01 17:40:38,883] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:40:38,884] 27 root - INFO - Scraping Started
+[2025-08-01 17:40:38,884] 13 root - INFO - Attempting to connect database
+[2025-08-01 17:40:38,924] 48 root - ERROR - Error occured
+[2025-08-01 17:40:39,832] 23 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 17:40:39,832] 27 root - INFO - Scraping Started
+[2025-08-01 17:40:39,832] 13 root - INFO - Attempting to connect database
+[2025-08-01 17:40:39,863] 48 root - ERROR - Error occured
