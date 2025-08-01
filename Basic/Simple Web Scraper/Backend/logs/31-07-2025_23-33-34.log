@@ -1,0 +1,16 @@
+[2025-07-31 23:33:34,307] 37 root - INFO - Scraping Started
+[2025-07-31 23:33:34,307] 13 root - INFO - Attempting to connect database
+[2025-07-31 23:33:34,352] 21 root - INFO - Database connection successful
+[2025-07-31 23:33:34,355] 27 root - INFO - Verifying existing data
+[2025-07-31 23:33:34,371] 38 root - INFO - 'Scraped_data' table is ready.
+[2025-07-31 23:33:34,371] 12 root - INFO - Fetcher initialized for https://carlescarrera.medium.com/the-power-of-superfoods-optimal-health-and-longevity-through-your-shopping-list-fee648c4c5ec
+[2025-07-31 23:33:34,371] 16 root - INFO - Sending GET request to https://carlescarrera.medium.com/the-power-of-superfoods-optimal-health-and-longevity-through-your-shopping-list-fee648c4c5ec
+[2025-07-31 23:33:35,928] 19 root - INFO - Sucessful response from https://carlescarrera.medium.com/the-power-of-superfoods-optimal-health-and-longevity-through-your-shopping-list-fee648c4c5ec with status code 200
+[2025-07-31 23:33:35,930] 43 root - INFO - Successfully fetched
+[2025-07-31 23:33:35,930] 9 root - INFO - Parser initialized 
+[2025-07-31 23:33:35,952] 32 root - INFO - Successfully parsed and extracted 4 items
+[2025-07-31 23:33:35,952] 48 root - INFO - Parsed successfully
+[2025-07-31 23:33:35,952] 48 root - INFO - Inserting
+[2025-07-31 23:33:35,981] 60 root - INFO - Successfully inserted 4
+[2025-07-31 23:33:35,981] 55 root - INFO - Scraped Successfully
+[2025-07-31 23:33:35,981] 70 root - INFO - Connection closed

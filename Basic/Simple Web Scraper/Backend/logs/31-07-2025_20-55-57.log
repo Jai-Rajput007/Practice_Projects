@@ -1,0 +1,16 @@
+[2025-07-31 20:55:57,129] 37 root - INFO - Scraping Started
+[2025-07-31 20:55:57,129] 13 root - INFO - Attempting to connect database
+[2025-07-31 20:55:57,164] 21 root - INFO - Database connection successful
+[2025-07-31 20:55:57,165] 27 root - INFO - Verifying existing data
+[2025-07-31 20:55:57,196] 38 root - INFO - 'Scraped_data' table is ready.
+[2025-07-31 20:55:57,196] 12 root - INFO - Fetcher initialized for http://books.toscrape.com/
+[2025-07-31 20:55:57,196] 16 root - INFO - Sending GET request to http://books.toscrape.com/
+[2025-07-31 20:55:58,869] 19 root - INFO - Sucessful response from http://books.toscrape.com/ with status code 200
+[2025-07-31 20:55:58,869] 43 root - INFO - Successfully fetched
+[2025-07-31 20:55:58,871] 9 root - INFO - Parser initialized 
+[2025-07-31 20:55:58,891] 32 root - INFO - Successfully parsed and extracted 21 items
+[2025-07-31 20:55:58,891] 48 root - INFO - Parsed successfully
+[2025-07-31 20:55:58,891] 48 root - INFO - Inserting
+[2025-07-31 20:55:58,899] 60 root - INFO - Successfully inserted 21
+[2025-07-31 20:55:58,900] 55 root - INFO - Scraped Successfully
+[2025-07-31 20:55:58,900] 70 root - INFO - Connection closed
