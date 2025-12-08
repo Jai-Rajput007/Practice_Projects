@@ -1,0 +1,68 @@
+[2025-08-01 19:47:46,597] 33 root - INFO - Scrape request for url :https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:47:46,597] 37 root - INFO - Scraping Started
+[2025-08-01 19:47:46,597] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:47:46,633] 23 root - INFO - Database connection successful
+[2025-08-01 19:47:46,633] 29 root - INFO - Verifying existing data
+[2025-08-01 19:47:46,639] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:47:46,639] 12 root - INFO - Fetcher initialized for https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:47:46,639] 16 root - INFO - Sending GET request to https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463
+[2025-08-01 19:47:48,549] 19 root - INFO - Sucessful response from https://www.health.harvard.edu/blog/10-superfoods-to-boost-a-healthy-diet-2018082914463 with status code 200
+[2025-08-01 19:47:48,562] 43 root - INFO - Successfully fetched
+[2025-08-01 19:47:48,562] 9 root - INFO - Parser initialized 
+[2025-08-01 19:47:48,592] 32 root - INFO - Successfully parsed and extracted 11 items
+[2025-08-01 19:47:48,592] 48 root - INFO - Parsed successfully
+[2025-08-01 19:47:48,592] 50 root - INFO - Inserting
+[2025-08-01 19:47:48,610] 62 root - INFO - Successfully inserted 11
+[2025-08-01 19:47:48,610] 53 root - INFO - Stored 11 items
+[2025-08-01 19:47:48,610] 72 root - INFO - Connection closed
+[2025-08-01 19:48:01,995] 33 root - INFO - Scrape request for url :https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 19:48:01,995] 37 root - INFO - Scraping Started
+[2025-08-01 19:48:01,995] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:48:02,030] 23 root - INFO - Database connection successful
+[2025-08-01 19:48:02,030] 29 root - INFO - Verifying existing data
+[2025-08-01 19:48:02,031] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:48:02,031] 12 root - INFO - Fetcher initialized for https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 19:48:02,031] 16 root - INFO - Sending GET request to https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f
+[2025-08-01 19:48:04,592] 19 root - INFO - Sucessful response from https://medium.com/@kala-shagun/end-to-end-document-classification-using-bert-and-ci-cd-pipelines-e2cdcc8b071f with status code 200
+[2025-08-01 19:48:04,592] 43 root - INFO - Successfully fetched
+[2025-08-01 19:48:04,592] 9 root - INFO - Parser initialized 
+[2025-08-01 19:48:04,602] 32 root - INFO - Successfully parsed and extracted 19 items
+[2025-08-01 19:48:04,602] 48 root - INFO - Parsed successfully
+[2025-08-01 19:48:04,602] 50 root - INFO - Inserting
+[2025-08-01 19:48:04,617] 62 root - INFO - Successfully inserted 19
+[2025-08-01 19:48:04,617] 53 root - INFO - Stored 19 items
+[2025-08-01 19:48:04,617] 72 root - INFO - Connection closed
+[2025-08-01 19:49:23,388] 33 root - INFO - Scrape request for url :https://ui.shadcn.com/docs/components/button
+[2025-08-01 19:49:23,388] 37 root - INFO - Scraping Started
+[2025-08-01 19:49:23,388] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:49:23,417] 23 root - INFO - Database connection successful
+[2025-08-01 19:49:23,417] 29 root - INFO - Verifying existing data
+[2025-08-01 19:49:23,419] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:49:23,419] 12 root - INFO - Fetcher initialized for https://ui.shadcn.com/docs/components/button
+[2025-08-01 19:49:23,419] 16 root - INFO - Sending GET request to https://ui.shadcn.com/docs/components/button
+[2025-08-01 19:49:24,340] 19 root - INFO - Sucessful response from https://ui.shadcn.com/docs/components/button with status code 200
+[2025-08-01 19:49:24,340] 43 root - INFO - Successfully fetched
+[2025-08-01 19:49:24,340] 9 root - INFO - Parser initialized 
+[2025-08-01 19:49:24,388] 32 root - INFO - Successfully parsed and extracted 14 items
+[2025-08-01 19:49:24,388] 48 root - INFO - Parsed successfully
+[2025-08-01 19:49:24,388] 50 root - INFO - Inserting
+[2025-08-01 19:49:24,388] 62 root - INFO - Successfully inserted 14
+[2025-08-01 19:49:24,388] 53 root - INFO - Stored 14 items
+[2025-08-01 19:49:24,388] 72 root - INFO - Connection closed
+[2025-08-01 19:50:34,088] 33 root - INFO - Scrape request for url :https://en.wikipedia.org/wiki/Dinosaur
+[2025-08-01 19:50:34,088] 37 root - INFO - Scraping Started
+[2025-08-01 19:50:34,088] 15 root - INFO - Attempting to connect database
+[2025-08-01 19:50:34,220] 23 root - INFO - Database connection successful
+[2025-08-01 19:50:34,220] 29 root - INFO - Verifying existing data
+[2025-08-01 19:50:34,221] 40 root - INFO - 'Scraped_data' table is ready.
+[2025-08-01 19:50:34,221] 12 root - INFO - Fetcher initialized for https://en.wikipedia.org/wiki/Dinosaur
+[2025-08-01 19:50:34,221] 16 root - INFO - Sending GET request to https://en.wikipedia.org/wiki/Dinosaur
+[2025-08-01 19:50:34,786] 19 root - INFO - Sucessful response from https://en.wikipedia.org/wiki/Dinosaur with status code 200
+[2025-08-01 19:50:34,788] 43 root - INFO - Successfully fetched
+[2025-08-01 19:50:34,788] 9 root - INFO - Parser initialized 
+[2025-08-01 19:50:35,275] 32 root - INFO - Successfully parsed and extracted 38 items
+[2025-08-01 19:50:35,275] 48 root - INFO - Parsed successfully
+[2025-08-01 19:50:35,275] 50 root - INFO - Inserting
+[2025-08-01 19:50:35,290] 62 root - INFO - Successfully inserted 38
+[2025-08-01 19:50:35,290] 53 root - INFO - Stored 38 items
+[2025-08-01 19:50:35,290] 72 root - INFO - Connection closed
