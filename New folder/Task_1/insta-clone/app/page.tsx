@@ -21,11 +21,18 @@ export default function Home() {
 
   return (
     <div className="mx-auto max-w-3xl p-6">
-      <h1 className="text-2xl font-semibold mb-4">Home Feed</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold">Home Feed</h1>
+      </div>
+
       {loading ? (
-        <div>Loading feed...</div>
+        <div className="space-y-6">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="rounded bg-card p-6 animate-pulse">&nbsp;</div>
+          ))}
+        </div>
       ) : posts.length === 0 ? (
-        <div className="text-muted-foreground">No posts to show. Follow users to see their posts.</div>
+        <div className="rounded bg-card p-6 text-muted-foreground">No posts to show. Follow users to see their posts.</div>
       ) : (
         <div className="space-y-6">
           {posts.map((p: Post) => (

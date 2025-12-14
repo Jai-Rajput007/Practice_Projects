@@ -9,6 +9,7 @@ import { Form, FormItem, FormLabel, FormControl, FormMessage } from "@/component
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 export default function CreatePage() {
 	const router = useRouter();
@@ -31,28 +32,36 @@ export default function CreatePage() {
 
 	return (
 		<div className="mx-auto max-w-md p-6">
-			<h1 className="text-2xl font-semibold mb-4">Create Post</h1>
-			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-					<FormItem>
-						<FormLabel>Image URL</FormLabel>
-						<FormControl>
-							<Input placeholder="https://..." {...form.register("imageUrl")} />
-						</FormControl>
-						<FormMessage>{form.formState.errors.imageUrl?.message}</FormMessage>
-					</FormItem>
+			<Card>
+				<CardHeader>
+					<CardTitle>Create Post</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<Form {...form}>
+						<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+							<FormItem>
+								<FormLabel>Image URL</FormLabel>
+								<FormControl>
+									<Input placeholder="https://..." {...form.register("imageUrl")} />
+								</FormControl>
+								<FormMessage>{form.formState.errors.imageUrl?.message}</FormMessage>
+							</FormItem>
 
-					<FormItem>
-						<FormLabel>Caption</FormLabel>
-						<FormControl>
-							<textarea className="w-full rounded border px-3 py-2" {...form.register("caption")} />
-						</FormControl>
-						<FormMessage>{form.formState.errors.caption?.message}</FormMessage>
-					</FormItem>
+							<FormItem>
+								<FormLabel>Caption</FormLabel>
+								<FormControl>
+									<textarea className="w-full rounded border px-3 py-2" {...form.register("caption")} />
+								</FormControl>
+								<FormMessage>{form.formState.errors.caption?.message}</FormMessage>
+							</FormItem>
 
-					<Button type="submit">Create</Button>
-				</form>
-			</Form>
+							<div className="flex justify-end">
+								<Button type="submit">Create</Button>
+							</div>
+						</form>
+					</Form>
+				</CardContent>
+			</Card>
 		</div>
 	);
 }

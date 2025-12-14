@@ -3,6 +3,8 @@ import type { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import connectToDatabase from "./mongooseConnect";
 import mongoose from "mongoose";
+import {MongoDBAdapter} from "@auth/mongodb-adapter";
+import clientPromise from "./mongoClient";
 
 export async function hashPassword(password: string) {
 	const salt = await bcrypt.genSalt(10);
@@ -13,8 +15,8 @@ export async function verifyPassword(password: string, hashed: string) {
 	return bcrypt.compare(password, hashed);
 }
 
-// Minimal NextAuth options object (Credentials provider)
 export const authOptions: NextAuthOptions = {
+	adapter: MongoDBAdapter(clientPromise as any),
 	providers: [
 		CredentialsProvider({
 			name: "Credentials",
@@ -30,12 +32,25 @@ export const authOptions: NextAuthOptions = {
 				if (!user) return null;
 				const valid = await verifyPassword(credentials.password, user.password as string);
 				if (!valid) return null;
-				// return object expected by NextAuth
 				return { id: user._id.toString(), email: user.email } as any;
 			},
 		}),
 	],
 	session: { strategy: "jwt" },
+	callbacks: {
+		async jwt({ token, user }) {
+			if (user) {
+				token.id = (user as any).id || (user as any)._id || token.sub;
+			}
+			return token;
+		},
+		async session({ session, token }) {
+			if (token && session.user) {
+				(session.user as any).id = token.id;
+			}
+			return session;
+		},
+	},
 };
 
 export default authOptions;
