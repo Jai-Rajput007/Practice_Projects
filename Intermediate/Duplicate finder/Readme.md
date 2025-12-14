@@ -47,7 +47,7 @@ Result: **10–100× faster** than naive tools.
 ### Installation
 
 ```bash
-git clone https://github.com/Jai-Rajput007/Practice_Projects/tree/926afd9284ea0e96c0af1c7997d4f12656b6f5ad/Intermediate/Duplicate%20finder.git
+git clone https://github.com/Jai-Rajput007/Practice_Projects/tree/main/Intermediate/Duplicate%20finder.git
 
 ```
 
