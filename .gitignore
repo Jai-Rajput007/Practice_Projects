@@ -1,0 +1,136 @@
+# ─────────────────────────────────────────────────────────────
+# Python / Backend
+# ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# Virtual environments & dependency managers
+venv/
+env/
+.venv/
+.env/
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Packaging & distribution
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+*.tar.gz
+*.tgz
+
+# ─────────────────────────────────────────────────────────────
+# Node.js / JavaScript / TypeScript / Frontend
+# ─────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+bun.lockb
+bunfig.toml
+
+# Build outputs
+dist/
+build/
+.next/
+.out/
+.output/
+.vercel/
+.netlify/
+coverage/
+*.min.js
+*.min.css
+
+# Dependency lockfiles – decide per project
+# (uncomment the one you DON'T want to commit)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# bun.lockb
+
+# Logs & temp
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Editor & OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.AppleDouble
+.LSOverride
+._*
+
+# ─────────────────────────────────────────────────────────────
+# Common dev tools & IDEs
+# ─────────────────────────────────────────────────────────────
+.vscode/
+!.vscode/settings.json          # ← keep project settings if you want
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+.idea/
+*.iml
+*.iws
+
+*.sublime-workspace
+*.sublime-project
+
+# ─────────────────────────────────────────────────────────────
+# Testing, coverage, profiling
+# ─────────────────────────────────────────────────────────────
+.nyc_output/
+playwright-report/
+test-results/
+playwright/.cache/
+
+# ─────────────────────────────────────────────────────────────
+# Databases, caches, temp files you probably don't want
+# ─────────────────────────────────────────────────────────────
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.tmp
+*.temp
+*.cache
+.cache/
+tmp/
+temp/
+
+# ─────────────────────────────────────────────────────────────
+# Secrets & sensitive files (double protection)
+# ─────────────────────────────────────────────────────────────
+.env*
+!.env.example
+secrets/
+credentials/
+*.key
+*.pem
+*.cert
+*.crt
+*.csr
+id_rsa
+id_dsa
+*.pgpass
