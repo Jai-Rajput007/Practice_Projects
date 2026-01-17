@@ -20,7 +20,7 @@ def auction():
             continue
         else :
             ans = max(auction,key=auction.get)
-            print(f"{ans} have won the auction.")
+            print(f"\n{ans} have won the auction with a bid of {auction[ans]}\n")
             tries = False
 
 if __name__ == "__main__" :
