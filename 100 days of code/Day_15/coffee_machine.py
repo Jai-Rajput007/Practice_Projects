@@ -2,6 +2,7 @@ from art import logo
 from resources import add_item,remove_item,show_menu,generate_report
 import os
 from typing import Callable
+from coins import order
 
 StateHandler = Callable[[],str]
 STATE = "main"
@@ -55,7 +56,9 @@ def menu_screen()->str|None:
     choice = input("-> ").strip().lower()
     match choice:
         case "order":
-            pass
+            order()
+            input("\n Press Enter...")
+            return "main"
         case "back":
             return "main"
         case _:

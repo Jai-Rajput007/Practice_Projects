@@ -168,7 +168,187 @@ You can write: Water, Coffee, Milk
             return "main"   # or "menu" — your choice      
 
 def remove_item():
-    pass
+    print("""
+What do you want to remove?
+Remove coffee from menu  : 'coffee'  or 'menu'
+Remove resources         : 'res'     or 'resources'
+    """)
+    choice = input("-> ").strip().lower()
+
+    conn = sqlite3.connect('Day_15/coffee.db')
+    cursor = conn.cursor()
+
+    if choice in ["coffee", "menu"]:
+        # ───────────────────────────────────────────────
+        # Remove coffee from menu
+        # ───────────────────────────────────────────────
+        try:
+            cursor.execute("SELECT coffee_name FROM coffee ORDER BY coffee_name")
+            coffees = cursor.fetchall()
+            
+            if not coffees:
+                print("\nNo coffees in the menu yet.")
+                conn.close()
+                input("\nPress Enter to continue...")
+                return "main"
+
+            print("\nCurrent menu:")
+            print("-" * 40)
+            for i, (name,) in enumerate(coffees, 1):
+                print(f"{i:2d}. {name}")
+            print("-" * 40)
+
+            to_remove = input("\nEnter the exact coffee name to remove (or 'cancel'): ").strip()
+            
+            if to_remove.lower() in ["cancel", "c", ""]:
+                print("Operation cancelled.")
+                conn.close()
+                input("\nPress Enter to continue...")
+                return "main"
+
+            cursor.execute("SELECT coffee_name FROM coffee WHERE coffee_name = ?", (to_remove,))
+            exists = cursor.fetchone()
+
+            if not exists:
+                print(f"\n'{to_remove}' not found in menu.")
+            else:
+                confirm = input(f"Are you sure you want to DELETE '{to_remove}'? (yes/no): ").strip().lower()
+                if confirm in ["yes", "y"]:
+                    cursor.execute("DELETE FROM coffee WHERE coffee_name = ?", (to_remove,))
+                    conn.commit()
+                    print(f"\n'{to_remove}' has been removed from the menu.")
+                else:
+                    print("Deletion cancelled.")
+
+        except sqlite3.Error as e:
+            print("Database error:", e)
+        
+        finally:
+            conn.close()
+            input("\nPress Enter to continue...")
+            return "main"
+
+    elif choice in ["res", "resources"]:
+        # ───────────────────────────────────────────────
+        # Remove/subtract resources
+        # ───────────────────────────────────────────────
+        print("""
+Which resources do you want to remove/subtract?
+You can write: Water, Coffee, Milk
+(separated by comma or space, case insensitive)
+        """)
+        user_input = input("-> ").strip().lower()
+
+        valid_map = {
+            "water":  "Water",
+            "coffee": "Coffee",
+            "milk":   "Milk"
+        }
+
+        words = [w.strip() for w in user_input.replace(",", " ").split() if w.strip()]
+        selected = {valid_map.get(w) for w in words if w in valid_map}
+        selected.discard(None)
+
+        if not selected:
+            print("\nNo valid resource names recognized.")
+            conn.close()
+            input("\nPress Enter to continue...")
+            return "main"
+
+        print("\nSelected:", ", ".join(sorted(selected)))
+
+        try:
+            # Get current values (first row)
+            cursor.execute("""
+                SELECT water, coffee, milk 
+                FROM resources 
+                ORDER BY rowid 
+                LIMIT 1
+            """)
+            row = cursor.fetchone()
+
+            if row is None:
+                print("\nNo resources row found in database.")
+                conn.close()
+                input("\nPress Enter to continue...")
+                return "main"
+
+            curr_water, curr_coffee, curr_milk = row
+
+            updates = []
+            params = []
+
+            if "Water" in selected:
+                try:
+                    amt = int(input(f"How much WATER (ml) to REMOVE? Current: {curr_water} ml → "))
+                    if amt <= 0:
+                        print("Amount must be positive → skipped")
+                    elif amt > curr_water:
+                        print(f"Not enough water (only {curr_water} ml available) → skipped")
+                    else:
+                        updates.append("water = water - ?")
+                        params.append(amt)
+                        print(f"  → Water will become: {curr_water - amt} ml")
+                except ValueError:
+                    print("Invalid number → water not changed")
+
+            if "Coffee" in selected:
+                try:
+                    amt = int(input(f"How much COFFEE (g) to REMOVE? Current: {curr_coffee} g → "))
+                    if amt <= 0:
+                        print("Amount must be positive → skipped")
+                    elif amt > curr_coffee:
+                        print(f"Not enough coffee (only {curr_coffee} g available) → skipped")
+                    else:
+                        updates.append("coffee = coffee - ?")
+                        params.append(amt)
+                        print(f"  → Coffee will become: {curr_coffee - amt} g")
+                except ValueError:
+                    print("Invalid number → coffee not changed")
+
+            if "Milk" in selected:
+                try:
+                    amt = int(input(f"How much MILK (ml) to REMOVE? Current: {curr_milk} ml → "))
+                    if amt <= 0:
+                        print("Amount must be positive → skipped")
+                    elif amt > curr_milk:
+                        print(f"Not enough milk (only {curr_milk} ml available) → skipped")
+                    else:
+                        updates.append("milk = milk - ?")
+                        params.append(amt)
+                        print(f"  → Milk will become: {curr_milk - amt} ml")
+                except ValueError:
+                    print("Invalid number → milk not changed")
+
+            if updates:
+                set_clause = ", ".join(updates)
+                query = f"""
+                    UPDATE resources
+                    SET {set_clause}
+                    WHERE rowid = (
+                        SELECT rowid FROM resources ORDER BY rowid LIMIT 1
+                    )
+                """
+                cursor.execute(query, params)
+                conn.commit()
+                print("\nResources updated successfully (amounts reduced).")
+            else:
+                print("\nNo valid amounts entered → no changes made.")
+
+        except sqlite3.Error as e:
+            print("Database error:", e)
+            conn.rollback()
+        
+        finally:
+            conn.close()
+            input("\nPress Enter to continue...")
+            return "main"
+
+    else:
+        print("\nInvalid choice. Use 'coffee' or 'res'.")
+        conn.close()
+        input("\nPress Enter to continue...")
+        return "main"
 
 def show_menu():
     conn = sqlite3.connect('Day_15/coffee.db')
