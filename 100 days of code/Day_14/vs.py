@@ -38,6 +38,8 @@ def vs_game():
         print(f"Your current score is : {count}")
         celeb_1,desc_1,followers_1 = random_celeb()
         celeb_2,desc_2,followers_2 = random_celeb()
+        if celeb_1 == celeb_2:
+            celeb_2,desc_2,followers_2 = random_celeb()
         print(f"Compare A : {celeb_1} , {desc_1} .")
         print("Vs")
         print(f"Against B : {celeb_2} , {desc_2} .")
