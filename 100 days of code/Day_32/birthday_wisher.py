@@ -3,7 +3,8 @@ import datetime as dt
 import random
 import pandas as pd
 import os
-
+import ssl
+from email.message import EmailMessage
 
 def excel_data_processor(filepath,row:int)->list[str]:
     df = pd.read_excel(filepath)           
@@ -45,14 +46,13 @@ def mail_selecter_creator(folderpath):
     if not os.path.exists("sent mails"):
         os.makedirs("sent mails")
     
-
     try:
         with open(random_file,'r') as f:
             content = f.read()
     except FileNotFoundError:
         print(f"Error: File '{random_file}' not found.")
         exit(1)
-    
+    file_mail_dict ={}
     for recipient,email in name_mail_dict.items():
 
         new_content  = content.replace("[name]",recipient)
@@ -60,4 +60,32 @@ def mail_selecter_creator(folderpath):
         safe_name = recipient.replace(" ", "_").replace(".", "").replace(",", "")
         output_filename = f"Birthday_{safe_name}.txt"
         output_path = os.path.join("sent mails", output_filename)
-        return output_filename,email
+        file_mail_dict[output_filename] = email
+
+    return file_mail_dict
+
+def email_postman():
+
+    check = birthday_checker("birthday.xlsx")
+    if check[0] == 0:
+        print("No One's bday Today") 
+        return
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL('smtp.gamil.com',port=465,context=context) as server:
+        server.login('jai.s.rajput.dev@gmail.com','sfhn jqly jqak glwn')
+        for files,mails in mail_selecter_creator("sent mails") :
+            with open(files,'r') as f:
+                lines = f.readlines()
+                if lines:
+                    subject = lines[0].strip()
+                    body = "".join(lines[1:])
+                    body = body.lstrip()
+                    msg = EmailMessage()
+                    msg['Subject'] = subject
+                    msg.set_content(body)
+                    msg['From'] = 'jai.s.rajput.dev@gmail.com'
+                    msg['To'] = mails
+                    sent = server.send_message(msg)
+                    print(f"Msg {sent}")
+
+                 
