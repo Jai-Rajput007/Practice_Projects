@@ -1,7 +1,9 @@
 from fastapi import FastAPI, Query, HTTPException
+from fastapi.middleware.cors import CORSMiddleware # <--- IMPORT THIS
 from pydantic import BaseModel
 import httpx
 from typing import List, Optional, Dict, Any
+import random
 
 app = FastAPI(
     title="Trivia API Proxy",
@@ -9,10 +11,24 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Response model (helps with automatic docs + validation)
+# <--- ADD THIS SECTION
+origins = [
+    "http://localhost:3000",  # Allow Next.js
+    "http://127.0.0.1:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+# ---> END ADD SECTION
+
 class TriviaQuestion(BaseModel):
     category: str
-    type: str  # "multiple" or "boolean"
+    type: str 
     difficulty: str
     question: str
     correct_answer: str
@@ -22,54 +38,32 @@ class TriviaResponse(BaseModel):
     response_code: int
     results: List[TriviaQuestion]
 
-
 @app.get("/trivia", response_model=TriviaResponse)
 async def get_trivia_questions(
-    amount: int = Query(10, ge=1, le=50, description="Number of questions (1–50)"),
-    category: Optional[int] = Query(None, ge=9, le=32, description="Category ID (9–32)"),
-    difficulty: Optional[str] = Query(None, pattern="^(easy|medium|hard)$", description="easy | medium | hard"),
-    type: Optional[str] = Query(None, pattern="^(multiple|boolean)$", description="multiple | boolean"),
-    token: Optional[str] = Query(None, description="Session token to avoid repeated questions")
+    amount: int = Query(10, ge=1, le=50),
+    category: Optional[int] = Query(None, ge=9, le=32),
+    difficulty: Optional[str] = Query(None, pattern="^(easy|medium|hard)$"),
+    type: Optional[str] = Query(None, pattern="^(multiple|boolean)$"),
+    token: Optional[str] = Query(None)
 ):
-    """
-    Fetch trivia questions from Open Trivia DB API.
-    
-    - All parameters are optional except amount (defaults to 10)
-    - Visit https://opentdb.com/api_config.php to generate your URL / see category IDs
-    """
+    # ... (Your existing logic here remains exactly the same) ...
     base_url = "https://opentdb.com/api.php"
-
     params: Dict[str, Any] = {"amount": amount}
 
-    if category is not None:
-        params["category"] = category
-    if difficulty is not None:
-        params["difficulty"] = difficulty.lower()
-    if type is not None:
-        params["type"] = type
-    if token is not None:
-        params["token"] = token
+    if category is not None: params["category"] = category
+    if difficulty is not None: params["difficulty"] = difficulty.lower()
+    if type is not None: params["type"] = type
+    if token is not None: params["token"] = token
 
     async with httpx.AsyncClient() as client:
         try:
             response = await client.get(base_url, params=params, timeout=10.0)
-            response.raise_for_status()  # raise exception for 4xx/5xx
+            response.raise_for_status()
             data = response.json()
-        except httpx.HTTPStatusError as e:
-            raise HTTPException(status_code=e.response.status_code, detail="Error from Trivia API")
-        except httpx.RequestError as e:
-            raise HTTPException(status_code=503, detail=f"Network error: {str(e)}")
+        except Exception as e:
+            raise HTTPException(status_code=503, detail=str(e))
 
-    # OpenTDB returns response_code: 0 = success, 1 = no results, etc.
     if data.get("response_code") != 0:
-        error_messages = {
-            1: "No Results – could not find questions matching your criteria",
-            2: "Invalid parameter – contains an invalid parameter",
-            3: "Token Not Found – session token does not exist",
-            4: "Token Empty – all questions for this token have been returned"
-        }
-        msg = error_messages.get(data["response_code"], "Unknown error from Trivia API")
-        raise HTTPException(status_code=400, detail=msg)
+        raise HTTPException(status_code=400, detail="API Error")
 
     return data
-
